@@ -56,8 +56,8 @@ fetch(
 
 // constants 
 
-const correctBonus = 10;
-const maxQuestions = 2;
+const correctBonus = 100;
+const maxQuestions = 10;
 
 startGame = () => {
     questionCounter = 0;

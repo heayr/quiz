@@ -90,6 +90,9 @@ h3 {
   background-color: white;
 }
 
+.btn-centered {
+  margin: 20px auto 0;
+}
 .btn:hover {
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);

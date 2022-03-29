@@ -57,7 +57,7 @@ fetch(
 // constants 
 
 const correctBonus = 10;
-const maxQuestions = 10;
+const maxQuestions = 2;
 
 startGame = () => {
     questionCounter = 0;
@@ -74,18 +74,11 @@ getNewQuestion = () => {
         // go to the end page
         return window.location.assign('/end.html');
     }
-
     questionCounter++;
     // questionCounterText.innerText = questionCounter + '/' + maxQuestions;
     progressText.innerText = `Question ${questionCounter}/${maxQuestions}`;
-
     //Update the progress bar 
-
     progressBarFull.style.width = `${(questionCounter / maxQuestions) * 100}%`;
-
-
-
-
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
@@ -111,7 +104,6 @@ choices.forEach(choice => {
         // if (selectedAnswer == currentQuestion.answer) {
         //     classToApply = 'correct';
         // }
-
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
         if (classToApply == 'correct') {
